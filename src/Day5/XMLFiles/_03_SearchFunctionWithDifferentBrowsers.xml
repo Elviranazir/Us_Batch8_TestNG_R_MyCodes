@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Search Function with FireFox">
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="message" value="mac"></parameter>
+        <classes>
+            <class name="Day5._03_SearchFunctionTestWithDifferentBrowsers"></class>
+        </classes>
+    </test>
+    <test name="Search Function with Edge">
+        <parameter name="browser" value="edge"></parameter>
+        <parameter name="message" value="mac"></parameter>
+        <classes>
+            <class name="Day5._03_SearchFunctionTestWithDifferentBrowsers"></class>
+        </classes>
+    </test>
+</suite>

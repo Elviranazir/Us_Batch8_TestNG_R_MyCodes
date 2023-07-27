@@ -1,29 +1,38 @@
 package Utilities;
 
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.Parameters;
 
 import java.io.IOException;
 import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class BaseDriver {
-
-  public static WebDriver driver;
+public class ParameterDriver {
+   public WebDriver driver = null;
 
     @BeforeClass(alwaysRun = true)
-    public void createDriver() {
+    @Parameters("browser")
+    public void createParameteredDriver(String browserName) {
         closePreviousDrivers();
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
-        driver = new ChromeDriver();
+
+        if (browserName.equalsIgnoreCase("Chrome")) {
+            driver = new ChromeDriver();
+        } else if (browserName.equalsIgnoreCase("Firefox")) {
+            driver = new FirefoxDriver();
+        } else if (browserName.equalsIgnoreCase("Edge")) {
+            driver = new EdgeDriver();
+        }
         driver.manage().window().maximize();
 
         Duration duration = Duration.ofSeconds(30);
@@ -41,13 +50,6 @@ public class BaseDriver {
         driver.quit();
     }
 
-    public void closePreviousDrivers() {
-        try {
-            Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
     public void login(){
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
 
@@ -73,5 +75,12 @@ public class BaseDriver {
         loginButton.click();
     }
 
+    public void closePreviousDrivers() {
+        try {
+            Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }

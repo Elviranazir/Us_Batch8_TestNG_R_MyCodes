@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Contact Us Test">
+        <parameter name="message" value="Hello TechnoStudy!"></parameter>
+        <parameter name="username" value="milalim@gmail.com"></parameter>
+        <parameter name="password" value="123456"></parameter>
+        <classes>
+            <class name="Day5._01_ContactUsTest">
+                <methods>
+                    <exclude name="contactUsTest2"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Contact Us Test 2">
+        <parameter name="message" value="Hello TechnoStudy!"></parameter>
+        <parameter name="username" value="milalim@gmail.com"></parameter>
+        <parameter name="password" value="123456"></parameter>
+
+        <classes>
+            <class name="Day5._01_ContactUsTest">
+                <methods>
+                    <exclude name="contactUsTest1"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
