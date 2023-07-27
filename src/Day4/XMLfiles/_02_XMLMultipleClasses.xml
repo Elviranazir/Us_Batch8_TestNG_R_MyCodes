@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Elvira/Us_Batch8_TestNG_R_MyCodes">
+        <classes>
+            <class name="Day01._01_Intro">
+                <methods>
+                    <include name="loginTest"/>
+                    <include name="addToCartTest"/>
+                    <include name="checkOutTest"/>
+                </methods>
+            </class>
+            <class name="Day01._02_Annotations">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+            <class name="Day02._01_Enable">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                    <include name="test4"/>
+                    <include name="test5"/>
+                    <include name="test6"/>
+                </methods>
+            </class>
+            <class name="Day02._02_Example">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+            <class name="Day02._03_Assertions">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                    <include name="test4"/>
+                    <include name="test5"/>
+                    <include name="test6"/>
+                    <include name="test7"/>
+                    <include name="test8"/>
+                    <include name="test9"/>
+                </methods>
+            </class>
+            <class name="Day02._04_SignUpTest">
+                <methods>
+                    <include name="signUpTest"/>
+                </methods>
+            </class>
+            <class name="Day02._05_Dependency">
+                <methods>
+                    <include name="startEngine"/>
+                    <include name="driveCar"/>
+                </methods>
+            </class>
+            <class name="Day03._01_Exercise1">
+                <methods>
+                    <include name="Test1"/>
+                </methods>
+            </class>
+            <class name="Day03._02_Exercise2">
+                <methods>
+                    <include name="validateMenu"/>
+                </methods>
+            </class>
+            <class name="Day03._3_Exercise3">
+                <methods>
+                    <include name="subscribeNewLetterText"/>
+                    <include name="unSubscribeNewLetterText"/>
+                    <include name="switchNewsletterSubscription"/>
+                </methods>
+            </class>
+            <class name="Day03._4_Exercise4">
+                <methods>
+                    <include name="Text"/>
+                    <include name="editAddressTest"/>
+                    <include name="deleteAddressTest"/>
+                </methods>
+            </class>
+            <class name="Day4._01_XMLIntro">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+            <class name="Day4._02_XMLMultipleClasses">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
