@@ -16,10 +16,8 @@ public class _4_Exercise4 extends BaseDriver {
      * Delete the address
      **/
     @Test
-    public void Text () {
+    public void addAddressTest () {
         login();
-        WebElement myAccount = driver.findElement(By.xpath("//span[.='My Account']"));
-        myAccount.click();
 
         WebElement addressBook = driver.findElement(By.xpath("//a[.='Address Book']"));
         addressBook.click();
@@ -37,28 +35,27 @@ public class _4_Exercise4 extends BaseDriver {
         company.sendKeys("aaa");
 
         WebElement address1 = driver.findElement(By.id("input-address-1"));
-        address1.sendKeys("address1");
+        address1.sendKeys("5874 John St.");
 
-        WebElement address2 = driver.findElement(By.id("input-address-2"));
-        address2.sendKeys("lim");
+        WebElement city = driver.findElement(By.id("input-city"));
+        city.sendKeys("LA");
 
-        WebElement city =driver.findElement(By.id("input-city"));
-        city.sendKeys("Istanbul");
+        WebElement postCode = driver.findElement(By.id("input-postcode"));
+        postCode.sendKeys("58941");
 
-        WebElement postCode =driver.findElement(By.id("input-postcode"));
-        postCode.sendKeys("15000");
+        WebElement selectCountry = driver.findElement(By.id("input-country"));
+        Select countrySelect = new Select(selectCountry);
+        countrySelect.selectByVisibleText("United States");
 
-        Select select = new Select(driver.findElement(By.id("input-country")));
-        select.selectByVisibleText("United States");
+        WebElement selectRegion = driver.findElement(By.id("input-zone"));
+        Select regionSelect = new Select(selectRegion);
+        regionSelect.selectByVisibleText("California");
 
-        Select select2 = new Select(driver.findElement(By.id("input-zone")));
-        select2.selectByVisibleText("California");
-
-        WebElement continueBtn = driver.findElement(By.xpath("//input[@value=\"Continue\"]"));
-        continueBtn.click();
+        WebElement continueButton = driver.findElement(By.cssSelector("input[type='submit']"));
+        continueButton.click();
 
        }
-    @Test(priority = 1,dependsOnMethods = "Text")
+    @Test(priority = 1,dependsOnMethods = "addAddressTest")
     void editAddressTest(){
         WebElement addressBook = driver.findElement(By.linkText("Address Book"));
         addressBook.click();
@@ -77,7 +74,7 @@ public class _4_Exercise4 extends BaseDriver {
         WebElement continueButton = driver.findElement(By.cssSelector("input[type='submit']"));
         continueButton.click();
     }
-    @Test(priority = 2,dependsOnMethods = "Text")
+    @Test(priority = 2,dependsOnMethods = "addAddressTest")
     void deleteAddressTest(){
         WebElement addressBook = driver.findElement(By.linkText("Delete"));
         addressBook.click();

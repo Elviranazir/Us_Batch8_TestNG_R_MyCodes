@@ -53,12 +53,6 @@ public class BaseDriver {
     public void login(){
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
 
-        WebElement myAccount = driver.findElement(By.xpath("//span[.='My Account']"));
-        myAccount.click();
-
-        WebElement login = driver.findElement(By.xpath("//a[.='Login']"));
-        login.click();
-
         WebElement email = driver.findElement(By.id("input-email"));
         email.sendKeys("milalim@gmail.com");
 
@@ -67,8 +61,5 @@ public class BaseDriver {
 
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Login']"));
         loginButton.click();
-
     }
-
-
 }
