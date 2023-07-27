@@ -10,7 +10,7 @@ public class _01_XMLIntro {
      *          @BeforeClass // runs before every class
      *              @BeforeMethod // runs before every @Test annotation
      *                  @Test method  // we write our tests
-     *                  @Test method
+     *                  @Test method  // we write our tests
      *              @AfterMethod // runs after every @Test annotation
      *          @AfterClass // runs after every class
      *      @AfterGroup // runs after every Group annotation
@@ -60,21 +60,21 @@ public class _01_XMLIntro {
 
     @BeforeClass
     public void beforeClass() {
-        System.out.println("Before Class is working");
+        System.out.println("Before class is working");
     }
 
     @AfterClass
     public void afterClass() {
-        System.out.println("After Class is working");
+        System.out.println("After class is working");
     }
 
     @Test
     public void test1() {
-        System.out.println("Test 1 is successful");
+        System.out.println("_01_XMLIntro Test 1 is successful");
     }
 
     @Test
     public void test2() {
-        System.out.println("Test 2 is successful");
+        System.out.println("_01_XMLIntro Test 2 is successful");
     }
 }

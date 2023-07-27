@@ -10,6 +10,6 @@ public class _02_XMLMultipleClasses {
 
     @Test
     void test2() {
-        System.out.println("_02_XMLMultipleClasses test2");
+       System.out.println("_02_XMLMultipleClasses test2");
     }
 }

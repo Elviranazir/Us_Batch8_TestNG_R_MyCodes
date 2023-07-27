@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _02_Exercise2 extends BaseDriver {
-    @Test
+    @Test(groups = "smokeTest")
     public void validateMenu() {
         /**
          * Go to "https://opencart.abstracta.us/index.php?route=account/login"

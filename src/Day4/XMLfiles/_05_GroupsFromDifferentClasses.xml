@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/Elvira/Us_Batch8_TestNG_R_MyCodes/src/Day4">
+    <test name="Test Groups Exclude">
+        <groups>
+            <run>
+                <include name="SmokeTest"></include>
+            </run>
+        </groups>
+
         <classes>
-            <class name="Day4._01_XMLIntro">
-                <methods>
-                    <include name="test1"/>
-                    <include name="test2"/>
-                </methods>
-            </class>
-            <class name="Day4._02_XMLMultipleClasses">
-                <methods>
-                    <include name="test1"/>
-                    <include name="test2"/>
-                </methods>
-            </class>
-            <class name="Day4._03_Groups">
-                <methods>
-                    <include name="test1"/>
-                    <include name="test2"/>
-                    <include name="test3"/>
-                    <include name="test4"/>
-                    <include name="test5"/>
-                </methods>
-            </class>
+            <class name="Day04._03_Groups"></class>
+            <class name="Day03._02_Exercise2"></class>
         </classes>
     </test>
 </suite>

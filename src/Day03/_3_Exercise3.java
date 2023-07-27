@@ -59,7 +59,7 @@ public class _3_Exercise3 extends BaseDriver {
 
        Tools.successMessageValidation();
     }
-    @Test(priority = 2, dependsOnMethods = "subscribeNewLetterText" )
+    @Test(priority = 2, dependsOnMethods = "subscribeNewLetterText")
     public void switchNewsletterSubscription(){
 
         WebElement newsLetter= driver.findElement(By.xpath("//a[.='Newsletter']"));
